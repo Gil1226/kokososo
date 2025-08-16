@@ -1,0 +1,101 @@
+.left-panel-container{
+    background-color: #4d1414;
+    color: white;
+    height: 100vh;
+    width: 20vw;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1.5vw;
+}
+.info-container{
+    display: flex;
+    width: 20vw;
+    justify-content: space-between;
+    padding: 0px 20px;
+    
+}
+.nav-option-container p{ 
+    height: 2.3vw;
+    width: 14vw;
+    border-bottom: 1px solid;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+.nav-option-container .fa-qrcode,
+.nav-option-container .fa-check-to-slot,
+.nav-option-container .fa-pen-nib,
+.logout-container .fa-power-off {
+    display: none;
+}
+.colored-nav-option{
+    color: #f4bb00;
+    border-bottom: 1px solid #f4bb00;
+}
+
+.logout-container p{
+    height: 2.3vw;
+    width: 14vw;
+    border-bottom: 1px solid white ;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+/*f4bboo*/
+.nav-option-container p:hover, .logout-container p:hover{
+    color: #f4bb00;
+    border-bottom: 1px solid #f4bb00;
+}
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 768px) {
+    
+}
+@media (max-width: 479px) {
+    .left-panel-container{
+        height: 7vh;
+        width: 100vw;
+    }
+    .info-container{
+        width: 0;
+    }
+    .info-container p:nth-child(1){
+        display: none;
+    }
+    .left-panel-container{
+        flex-direction: row;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .nav-option-container{
+        display: flex; 
+        width: 70vw;
+        align-items: center;
+        justify-content: space-around;
+        order: -1;
+    }
+    .nav-option-container p{
+        display: none;
+    }
+    .logout-container p{
+        display: none;
+    }
+    .nav-option-container .fa-qrcode,
+    .nav-option-container .fa-check-to-slot,
+    .nav-option-container .fa-pen-nib,
+    .logout-container .fa-power-off {
+        display: block;
+        font-size: 23px;
+    }
+    .colored-nav-option{
+        color: #f4bb00;
+        border-bottom: none;
+    }
+    .info-container .fa-bell
+    {
+        font-size: 23px;
+    }
+}

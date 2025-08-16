@@ -1,0 +1,180 @@
+.room-num{
+    color: #4d1414;
+    font-weight: bolder;
+}
+.option-panel-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+    width: 100%;
+    padding: 1vw;
+}
+.modify-container{
+    display: flex;
+    cursor: default;
+}
+.modify-container p{
+    margin-left: 20px;
+    color: #4d1414;
+    font-weight: bolder;
+}
+.modify-container p.show{
+    color: #f4bb00;
+}
+.rrr-btn{
+    display: none;
+}
+.rrr-btn.showRRR{
+    display: block;
+}
+
+.item-container{
+    height: 70vh;
+    width: 20vw;
+    position: absolute;
+    right: 1vw;
+    top: 11vh;
+    background-color:#f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+.item-container p{
+    text-align: center;
+}
+.item-container img{
+    width: 3vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-container.show{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0s linear 0s;
+}
+
+
+.layout-area-panel{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    height: 80vh;
+    width: 78vw;
+    margin-left: 1vw;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+}
+.save-btn-rl{
+    position: absolute;
+    right: 2vw;
+    bottom: 1.5vh;
+}
+.item-dropped-pic{
+    width: 3vw;
+    height: auto;
+}
+.item-dropped.selected{
+    filter: grayscale(100%);
+}
+
+
+
+
+.report-ticket-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 60vh;
+    width: 23vw;
+    background-color: #f9f9f9;
+    border: 2px solid #4d1414;
+    padding: 1vw;
+    display: none;
+}
+.report-ticket-container.showRT{
+    display: block;
+}
+.lbl-report-ticket{
+    height: 5vh;
+    color: #f4bb00;
+    font-size: 18px;
+    font-weight: bolder;
+    border-bottom: 1px solid #4d1414;
+}
+.form-row{
+    display: flex;
+    margin-top: 1.5vh;
+}
+.form-row label{
+    width: 40%;
+    font-size: 14px;
+}
+.form-row input,
+.form-row select{
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #4d1414;
+    width: 80%;
+    outline: none;
+}
+.report-ticket-form textarea{
+    display: block;
+    resize: none;
+    height: 20vh;
+    width: 100%;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+.btn-container-form-RL{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.pendingItem{
+    filter: brightness(0) saturate(100%) invert(12%) sepia(100%) saturate(7483%) hue-rotate(-18deg) brightness(101%) contrast(122%);
+}
+@media (max-width: 1024px) {
+    
+}
+@media (max-width: 768px) {
+    
+}
+@media (max-width: 479px) {
+    .modify-container p:nth-child(1),
+    .modify-container p:nth-child(2),
+    .modify-container p:nth-child(3),
+    .modify-container p:nth-child(4),
+    .modify-container p:nth-child(6),
+    .save-btn-rl{
+        display: none;
+    }
+    .modify-container p:nth-child(5){
+        margin-right: 10px;
+    }
+    .layout-area-panel{
+        width: 100vw;
+        height: 40vh;
+        margin: 1vh 0;
+    }
+    .option-panel-container .dropdown{
+        width: 25vw;
+    }
+    .report-ticket-container{
+        width: 80vw;
+    }
+    .item-dropped-pic{
+        width: 4vw;
+        height: auto;
+    }
+}
